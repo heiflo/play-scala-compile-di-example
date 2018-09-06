@@ -1,4 +1,5 @@
 import play.api._
+import play.api.libs.mailer.MailerComponents
 import play.api.routing.Router
 
 class MyApplicationLoader extends ApplicationLoader {
@@ -13,7 +14,10 @@ class MyApplicationLoader extends ApplicationLoader {
 class MyComponents(context: ApplicationLoader.Context) 
   extends BuiltInComponentsFromContext(context)
   with play.filters.HttpFiltersComponents
-  with _root_.controllers.AssetsComponents {
+  with _root_.controllers.AssetsComponents
+  with MailerComponents {
+
+  lazy val myComponent = new MyComponent(mailerClient)
 
   lazy val homeController = new _root_.controllers.HomeController(controllerComponents)
 
