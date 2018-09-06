@@ -1,4 +1,4 @@
-# play-scala-compile-di-example
+# play-scala-compile-di-example to reproduce compilation error when using play-mailer with compile time injection
 
 [<img src="https://img.shields.io/travis/playframework/play-scala-compile-di-example.svg"/>](https://travis-ci.org/playframework/play-scala-compile-di-example)
 
